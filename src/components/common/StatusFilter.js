@@ -14,25 +14,25 @@ const StatusFilter = () => {
     <Wrapper>
       <div className="filter-box" onClick={handleClick}>
         <span>
-          Filter by Status
-          {isShowOption ? (
-            <FaAngleUp
-              style={{
-                fontSize: "18px",
-                marginLeft: "5px",
-                color: "#7C5DFA",
-              }}
-            />
-          ) : (
-            <FaAngleDown
-              style={{
-                fontSize: "18px",
-                marginLeft: "5px",
-                color: "#7C5DFA",
-              }}
-            />
-          )}
+          Filter <span className="text">by Status</span>
         </span>
+        {isShowOption ? (
+          <FaAngleUp
+            style={{
+              fontSize: "18px",
+              marginLeft: "5px",
+              color: "#7C5DFA",
+            }}
+          />
+        ) : (
+          <FaAngleDown
+            style={{
+              fontSize: "18px",
+              marginLeft: "5px",
+              color: "#7C5DFA",
+            }}
+          />
+        )}
         {isShowOption && (
           <ul className="filter-option">
             {status.map((item) => (
@@ -48,19 +48,24 @@ const StatusFilter = () => {
   );
 };
 const Wrapper = styled.div`
-  div {
-    position: relative;
-    cursor: pointer;
-    span {
-      color: rgb(12, 14, 22);
-      font-family: Spartan, sans-serif;
-      font-weight: bold;
-      transition: color 0.3s ease 0s;
-      font-size: 0.75rem;
-      line-height: 1.25;
-      letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
+  position: relative;
+  cursor: pointer;
+  .filter-box {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    color: ${(props) => props.color || props.theme.color.text.bodyA};
+    font-family: Spartan, sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease 0s;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+  .text {
+    @media (max-width: 776px) {
+      display: none;
     }
   }
   .filter-option {

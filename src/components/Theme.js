@@ -2,6 +2,7 @@ export const light = {
   color: {
     body: {
       bg: "#f8f8fb",
+      text: "red",
     },
     sidebar: {
       bg: "#373b53",
@@ -69,6 +70,7 @@ export const dark = {
   color: {
     body: {
       bg: "#141625",
+      text: "#fff",
     },
     sidebar: {
       bg: "#1e2139",
@@ -97,6 +99,7 @@ export const dark = {
     },
     invoiceItem: {
       bg: "#1e2139",
+      text: "#ffffff",
     },
     invoiceStatus: {
       bg: "rgba(223, 227, 250, .06)",

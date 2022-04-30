@@ -23,6 +23,12 @@ const Demo = ({ setIsShowAddForm }) => {
 
   return (
     <Form
+      className="form-wrapper"
+      style={{
+        overflowY: "scroll",
+        height: "100%",
+        paddingRight: "20px",
+      }}
       layout="vertical"
       name="basic"
       initialValues={{ remember: true }}
@@ -30,8 +36,10 @@ const Demo = ({ setIsShowAddForm }) => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
-      <Title level={2}>Create Invoice</Title>
-      <Title level={4}>Bill From</Title>
+      <h2 className="title" level={2}>
+        Create Invoice
+      </h2>
+      <h4 level={4}>Bill From</h4>
       <Form.Item
         label="Street Address"
         name="streetAddress"
@@ -159,7 +167,7 @@ const Demo = ({ setIsShowAddForm }) => {
           </Form.Item>
         </Col>
       </Row>
-      <Row>
+      <Row gutter={16}>
         <Col md={12}>
           <Form.Item label="Invoice Date">
             <DatePicker className="input-field" />

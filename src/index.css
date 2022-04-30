@@ -32,7 +32,7 @@ body {
 }
 @media(max-width:992px){
     .right-side{
-        padding:0.5rem 2rem;
+        padding:0.5rem 1rem;
     }
 
 }
@@ -48,3 +48,26 @@ height: 100vh;
 z-index: 998;
 background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
+html::-webkit-scrollbar ,
+.form-wrapper::-moz-scrollbar {
+  width: 8px!important;
+}
+
+html::-webkit-scrollbar-thumb,
+.form-wrapper::-moz-scrollbar  {
+  background: #d6d1ce!important;
+  border-radius: 25px!important;
+}
+
+html::-moz-scrollbar,
+.form-wrapper::-moz-scrollbar  {
+  width: 13px!important;
+}
+
+html::-moz-scrollbar-thumb,.form-wrapper::-moz-scrollbar-thumb
+ {
+  background: #d6d1ce!important;
+  border-radius: 25px!important;
+}
+
+

@@ -1,5 +1,5 @@
 import React from "react";
-import styledComponents from "styled-components";
+import styled from "styled-components";
 import { FaPlus } from "react-icons/fa";
 import StatusFilter from "./common/StatusFilter";
 const PageHeader = ({ setIsShowAddForm }) => {
@@ -20,24 +20,30 @@ const PageHeader = ({ setIsShowAddForm }) => {
           <span className="plus-icon-container">
             <FaPlus style={{ color: "#8F73FE" }} />
           </span>
-          <span className="text">New Invoice</span>
+          New<span className="text">Invoice </span>
         </button>
       </div>
     </Wrapper>
   );
 };
 
-const Wrapper = styledComponents.div`
+const Wrapper = styled.div`
    margin-bottom: 4rem;
    display:flex;
    justify-content:space-between;
    align-items:center;
+@media(max-width:576px){
+  align-items:flex-start;
 
+}
    .filter-container{
      display:flex;
      align-items:center;
 
      justify-content:flex-end;
+     @media(max-width:776px){
+      align-items:flex-start;
+    }
    }
   h1 {
     color: #000;
@@ -48,12 +54,14 @@ const Wrapper = styledComponents.div`
     line-height: 1.125;
     letter-spacing: -1px;
     margin-bottom:0.5rem;
+     color: ${(props) => props.color || props.theme.color.text.bodyA};
     @media(max-width:992px){
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
   
   }
   p{
+    color: ${(props) => props.color || props.theme.color.text.bodyA};
     font-family: Spartan, sans-serif;
     transition: color 0.3s ease 0s;
     color: rgb(136, 142, 176);
@@ -81,6 +89,9 @@ const Wrapper = styledComponents.div`
     margin-left:40px;
     .text{
       padding-left:8px;
+      @media(max-width:576px){
+        display:none;
+      }
     }
     
 
@@ -93,8 +104,7 @@ const Wrapper = styledComponents.div`
   display:flex;
   justify-content:center;
   align-items:center;
-
-
+  margin-right:7px;
 }
   }
 `;

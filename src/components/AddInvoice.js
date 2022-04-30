@@ -42,7 +42,7 @@ const AddInvoice = ({ isShowAddForm, setIsShowAddForm }) => {
   );
 };
 const FormContainer = styled.div`
-  overflow-y: auto;
+  /* overflow-y: auto; */
 
   width: 50%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
@@ -56,12 +56,19 @@ const FormContainer = styled.div`
   transition: all 0.5s;
   padding: 3.5rem 2rem 0px 7.5rem;
 
+  @media (max-width: 992px) {
+    width: 80%;
+    padding: 3.5rem 2rem 0px 2.5rem;
+  }
+  @media (max-width: 776px) {
+    width: 100%;
+    padding: 3.5rem 2rem 0px 2.5rem;
+  }
   &.show {
     left: 0;
   }
   form {
     h2 {
-      color: rgb(12, 14, 22);
       font-family: Spartan, sans-serif;
       font-weight: bold;
       transition: color 0.3s ease 0s;
@@ -78,7 +85,7 @@ const FormContainer = styled.div`
       font-size: 1rem;
       line-height: 1.125;
       letter-spacing: -0.25px;
-      color: rgb(124, 93, 250);
+
       font-weight: bold;
     }
   }

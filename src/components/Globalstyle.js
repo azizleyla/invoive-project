@@ -13,11 +13,13 @@ export const GlobalStyles = createGlobalStyle`
         transition: background .3s;
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
+        color:${(props) => props.theme.color.body.text}
     }
     .sidebar{
         background: ${(props) => props.theme.color.sidebar.bg};
     }
     .single-invoice{
+        color: ${(props) => props.theme.color.invoiceItem.text};
       background: ${(props) => props.theme.color.invoiceItem.bg};
     }
     .title{
