@@ -1,5 +1,6 @@
 import React from "react";
-import styledComponents from "styled-components";
+import styled from "styled-components";
+
 const Sidebar = ({ toggleTheme, theme }) => {
   return (
     <Wrapper className="sidebar">
@@ -35,7 +36,7 @@ const Sidebar = ({ toggleTheme, theme }) => {
   );
 };
 
-const Wrapper = styledComponents.div`
+const Wrapper = styled.div`
   position: sticky;
   height: 100vh;
   border-radius: 0px 20px 20px 0px;
@@ -50,7 +51,7 @@ const Wrapper = styledComponents.div`
   transition: background 0.3s ease 0s;
   width:80px;
   @media(max-width:992px){
-     height:5rem;
+    height:5rem;
     width:100% ;
     flex-direction:row;
     align-items:center;

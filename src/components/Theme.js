@@ -2,7 +2,6 @@ export const light = {
   color: {
     body: {
       bg: "#f8f8fb",
-      text: "red",
     },
     sidebar: {
       bg: "#373b53",
@@ -52,7 +51,7 @@ export const light = {
     },
     text: {
       heading: "#0C0E16",
-      bodyA: "#888eb0",
+      bodyA: "#0C0E16",
       bodyB: "#858BB2",
       formLabel: "#7E88C3",
       link: "#0c0e16",
